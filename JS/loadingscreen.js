@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Get the target game from localStorage
     const targetGame = localStorage.getItem('targetGame');
+    if (!targetGame) {
+        console.error('No target game found in localStorage');
+        return;
+    }
 
     const interval = setInterval(() => {
         if (progress >= 100) {

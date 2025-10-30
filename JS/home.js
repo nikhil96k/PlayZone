@@ -4,8 +4,8 @@ playBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
         const gameUrl = btn.dataset.url;
-        localStorage.setItem('targetGame', gameUrl); // store clicked game
-        window.location.href = 'loadingscreen.html'; // go to loading screen
+        localStorage.setItem('targetGame', "../" + gameUrl); // store clicked game with adjusted path
+        window.location.href = 'HTML/loadingscreen.html'; // go to loading screen
     });
 });
 
@@ -17,34 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (performance.getEntriesByType("navigation")[0].type === "reload") {
         localStorage.setItem('gameStats', JSON.stringify({}));
     }
-
-    // ---------- PLAY BUTTON HANDLER ----------
-    const playBtns = document.querySelectorAll('.play-btn');
-
-    playBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-
-            const gameName = btn.closest('.card').querySelector('.card-title').innerText;
-            const gameUrl = btn.dataset.url;
-
-            // --- Update dashboard stats ---
-            let stats = JSON.parse(localStorage.getItem('gameStats')) || {};
-            if (!stats[gameName]) {
-                stats[gameName] = { plays: 0, totalTime: 0, lastStart: 0 };
-            }
-
-            stats[gameName].plays += 1;
-            stats[gameName].lastStart = Date.now(); // track start time
-            localStorage.setItem('gameStats', JSON.stringify(stats));
-
-            // --- Store target game for loading page ---
-            localStorage.setItem('targetGame', gameUrl);
-
-            // --- Redirect to loading page ---
-            window.location.href = 'loadingscreen.html';
-        });
-    });
 
     // ---------- DASHBOARD UPDATE ----------
     const profileDrawer = document.getElementById('profileDrawer');
