@@ -1,0 +1,535 @@
+
+
+/* body{
+  margin: 0;
+  padding: 0;
+} */
+
+
+/* ****************DROPDOWNMENU************************ */
+
+/* Show main dropdown on hover for desktop */
+@media (min-width: 992px) {
+  .nav-item.dropdown:hover > .dropdown-menu {
+    display: flex; /* first-level horizontal dropdown */
+    margin-top: 0;
+  }
+}
+
+/* Submenu container */
+.dropdown-submenu {
+  position: relative;
+}
+
+/* Hide second-level submenu by default */
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* appears below SINGLEPLAYER / MULTIPLAYER */
+  left: 0;
+  min-width: 200px;
+  /* background-color: #fff; */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 1050;
+  padding: 10px;
+}
+
+/* Show second-level submenu on hover */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Style first-level items */
+.dropdown-submenu > .dropdown-item {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Add spacing between SINGLEPLAYER and MULTIPLAYER */
+.dropdown-menu.d-flex > .dropdown-submenu {
+  margin-right: 10px;
+}
+
+/* Hover effect for all items */
+/* .dropdown-item:hover {
+  background-color: #f8f9fa;
+} */
+
+
+
+   
+
+
+/* slidebar */
+.carousel-video {
+    width: 100%;           /* full width like images */
+    height: 500px;         /* set height same as your images */
+    object-fit: cover;     /* crop video to cover the area without stretching */
+}
+.carousel-video {
+  width: 100%;
+  height: 75vh;          /* adjust to match your carousel size */
+  object-fit: cover;     /* fill the carousel without stretching */
+}
+
+/* Overlay container */
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  pointer-events: none;   /* allow clicks on the button only */
+}
+
+.carousel-overlay button {
+  pointer-events: auto;   /* enable button click */
+}
+
+/* Typewriter effect */
+.typewriter-text {
+  overflow: hidden;
+  /* border-right: 2px solid #fff; */
+  white-space: nowrap;
+  animation: typing 4s steps(30) 1, blink 0.75s step-end infinite;
+  font-size: 2.5rem;
+  /* pointer-events: none; */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+
+
+
+
+
+
+
+/* ************games and mostplayedgames*********** */
+.product-card {
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-container {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.card-img-container img,
+.card-img-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: opacity 0.4s ease;
+}
+
+.card-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none; /* disable user interaction */
+}
+
+.product-card:hover .card-video {
+  opacity: 1;
+}
+
+.product-card:hover .main-img {
+  opacity: 0;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  padding: 0;
+  transition: transform 0.2s ease;
+}
+
+.btn-icon:hover {
+  transform: scale(1.1);
+}
+
+
+/* *************aboutsection************ */
+.about-section {
+  background: url('../Resource/img/about.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  overflow: hidden; /* Ensures border-radius works on background */
+}
+
+.rounded-section {
+  border-radius: 20px; /* Adjust corner roundness */
+}
+
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+
+.about-section a.btn {
+  position: relative;
+  z-index: 2;
+}
+
+.about-section .container {
+  position: relative;
+  z-index: 1; /* text above overlay */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+#about .btn-primary {
+  background: #da1818;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-left: 30px;
+}
+
+
+
+
+/* *************Contact Section************ */
+#contact {
+  background: url('../Resource/img/contactback.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  overflow: hidden; 
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  padding: 80px 0;
+}
+
+/* Dark overlay for text readability */
+#contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+/* Content always above overlay */
+#contact .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Headings & paragraph styling */
+#contact h2 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-left: 30px;
+}
+
+#contact p {
+  color: #f1f1f1;
+  font-size: 1rem;
+  margin-left: 30px;
+}
+
+/* Form styling */
+#contact .form-control {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 10px;
+  color: #000;
+  font-weight: 500;
+  margin-left: 30px;
+}
+#contact .form-label{
+  margin-left: 30px;
+}
+
+#contact .btn-primary {
+  background: #da1818;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-left: 30px;
+}
+
+#contact .btn-primary:hover {
+  background: #ff3385;
+  transform: scale(1.05);
+}
+
+/* Social icon buttons */
+#contact .btn-outline-primary,
+#contact .btn-outline-danger,
+#contact .btn-outline-info {
+  border: 2px solid #fff;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+#contact .btn-outline-primary:hover,
+#contact .btn-outline-danger:hover,
+#contact .btn-outline-info:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-5px);
+}
+
+/* Smooth scroll behavior for entire site */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+/* *********profile********* */
+
+.profileback{
+  background-image: url(../Resource/img/profileback.jfif);
+  border-radius: 30px;
+}
+
+#profileDrawer ,#likedGamesDrawer{
+  margin-top: 57px;
+  margin-bottom: 10px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+
+
+
+
+/* ******************dashbord*********** */
+/* Profile dashboard container */
+#dashboardStats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+    max-height: 400px; /* Adjust based on drawer */
+    overflow-y: auto;
+}
+
+/* Each game item */
+#dashboardStats > div {
+    background-color: #1e1e2f;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 10px 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Game name */
+#dashboardStats > div strong {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #00ffcc;
+    margin-bottom: 4px;
+}
+
+/* Plays count */
+#dashboardStats > div .plays-count {
+    font-size: 0.95rem;
+    color: #ffa500;
+}
+
+/* Time played */
+#dashboardStats > div .time-played {
+    font-size: 0.95rem;
+    color: #ff6b6b;
+}
+
+/* Optional scrollbar styling */
+#dashboardStats::-webkit-scrollbar {
+    width: 6px;
+}
+#dashboardStats::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 3px;
+}
+
+
+
+body{
+  background-color: #00ffcc ;
+}
+/* *******************darkmode************** */
+/* Dark mode body */
+body.dark-mode {
+  background-color: rgb(0, 0, 0) ;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .navbar{
+  background: rgb(37, 35, 35) !important; /* override gradient */
+  transition: background 0.3s, color 0.3s;
+}
+body.dark-mode .dropdown-menu{
+  background: rgb(37, 35, 35) !important; /* override gradient */
+  transition: background 0.3s, color 0.3s;
+}
+body.dark-mode footer{
+  background: rgb(37, 35, 35) !important;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark-mode .navbar img{
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)!important;
+      transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode footer h5,
+body.dark-mode footer p {
+    color: white !important;
+}
+
+
+/* Navbar text and links in dark mode */
+body.dark-mode .navbar .nav-link,
+body.dark-mode .navbar .navbar-brand,
+body.dark-mode .navbar .btn,
+body.dark-mode .navbar .dropdown-item{
+  color: white !important;
+}
+
+
+
+/* Navbar link hover in dark mode */
+body.dark-mode .navbar .nav-link:hover,
+body.dark-mode .navbar .dropdown-item:hover {
+  color: #ff5555 !important;
+}
+
+/* Form control (search input) in dark mode */
+body.dark-mode .navbar .form-control {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+}
+body.dark-mode .navbar .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+
+/* *********** Liked Games Drawer in Dark Mode *********** */
+body.dark-mode .offcanvas {
+  background-color: #000 !important; /* Full black background */
+  color: #fff !important; /* White text */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Drawer header */
+body.dark-mode .offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Drawer title */
+body.dark-mode #likedGamesLabel {
+  color: #fff !important;
+}
+
+/* Close button (white filter for visibility) */
+body.dark-mode .offcanvas .btn-close {
+  filter: invert(100%) brightness(200%);
+}
+
+/* Drawer text or message */
+body.dark-mode .offcanvas-body p {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Optional: if your liked game cards are added inside */
+body.dark-mode .offcanvas .card {
+  background-color: #111 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+/* Dark mode styles for liked game cards */
+body.dark-mode [data-liked] {
+  background-color: #111 !important; /* dark card background */
+  color: #fff !important;            /* white text */
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Dark mode buttons inside liked drawer */
+body.dark-mode [data-liked] .btn-success {
+  background-color: #198754 !important;
+  color: #fff !important;
+}
+
+body.dark-mode [data-liked] .btn-danger {
+  background-color: #dc3545 !important;
+  color: #fff !important;
+}
+
+/* Image styling remains unchanged */
+body.dark-mode [data-liked] img {
+  filter: none; /* keep original colors */
+}
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

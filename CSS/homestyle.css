@@ -1,0 +1,144 @@
+/* 
+.navbar {
+  background: linear-gradient(135deg, #2b2b2b 0%, #3a3a3a 40%, #ffffff 50%, #ff4c4c 70%, #b30000 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease-in-out infinite alternate;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+@keyframes gradientShift {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+
+.navbar-brand {
+  color: #ff4c4c !important;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+  transition: all 0.4s ease-in-out;
+}
+
+
+.navbar-brand:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
+}
+
+.navbar-nav .nav-link {
+  color: #e0e0e0 !important;
+  font-weight: 600;
+  margin: 0 10px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+}
+ */
+
+
+
+
+
+
+/* ====== NAVBAR GRADIENT STYLE ====== */
+.navbar , .modal-header  {
+  background: linear-gradient(135deg, #494747 0%, #837d7d 40%, #c5bdbd 50%, #eb9696 70%, #f05f5f 100%) !important;
+
+}
+
+/* ====== TEXT STYLES ====== */
+.navbar-nav .nav-link,
+.navbar-brand,
+.navbar .btn,
+.navbar .dropdown-item {
+  color: #ffffff !important;
+  font-weight: 700;
+
+}
+
+/* ====== NAV LINK HOVER ====== */
+.navbar-nav .nav-link:hover {
+  color: #ff5555 !important;
+}
+
+/* ====== SEARCH BAR ====== */
+.navbar .form-control  {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: 600;
+}
+.navbar .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.navbar .form-control:focus {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  outline: none;
+ 
+  border-color: rgba(255, 90, 90, 0.8);
+}
+
+/* ====== DROPDOWN MENU ====== */
+.dropdown-menu, footer {
+  background: linear-gradient(135deg, #494747 0%, #837d7d 40%, #c5bdbd 50%, #eb9696 70%, #f05f5f 100%);
+  border: none;
+}
+.dropdown-item {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+.dropdown-item:hover {
+  background: transparent !important;
+  color: #ff5555 !important;
+}
+
+/* ====== BUTTONS (Login / Search) ====== */
+.navbar .btn-outline-success {
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: 700;
+  background: transparent !important;
+}
+.navbar .btn-outline-success:hover {
+  background: transparent !important;
+  color: #ff5555 !important;
+  border-color: #ff5555 !important;
+}
+
+/* ====== ICON BUTTONS (Night Mode, Profile, etc.) ====== */
+.navbar button img {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.navbar button:hover img {
+  filter: brightness(3) drop-shadow(0 0 6px #ff5555);
+  transform: scale(1.15);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 992px) {
+  .navbar-nav .nav-link {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+.card-body,.card{
+  background: linear-gradient(135deg, #494747 0%, #837d7d 40%, #c5bdbd 50%, #eb9696 70%, #f05f5f 100%);
+}
+
+
+
+
+
+

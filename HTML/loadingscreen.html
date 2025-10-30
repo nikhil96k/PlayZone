@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Loading</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../CSS/loadingscreen.css">
+</head>
+<body>
+    <div class="loading-container d-flex flex-column justify-content-center align-items-center vh-100 bg-dark text-white">
+        <h1 class="mb-4">Loading Game...</h1>
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-3">Please wait while the game assets are loaded.</p>
+        <!-- Optional: Progress Bar -->
+       <div class="progress-container mt-3" style="width: 60%; position: relative; height: 25px;">
+    <div class="progress-bar-bg"></div>
+    <div class="progress-bar-fill"></div>
+    <img src="../Resource/img/bycicle.png" height="25px" alt="Icon" id="progressIcon" />
+</div>
+
+    </div>
+
+    <!-- Bootstrap JS (optional, for some components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/loadingscreen.js"></script> <!-- For progress bar or hiding the loader -->
+</body>
+</html>

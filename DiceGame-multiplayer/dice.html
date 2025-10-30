@@ -1,0 +1,101 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dice.css">
+</head>
+<body>
+    <div class="container">
+      <h1>Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="./images/dice1.png" />
+        <div>
+          <button id="Player1" onclick="play1()">play</button>
+        </div>
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="./images/dice2.png" />
+         <div>
+          <button id="Player2" onclick="play2()">play</button>
+        </div>
+      </div>
+       <div class="btn">
+        <button onclick="refresh()">Refresh</button>
+    </div>
+    </div>
+   
+
+    <footer> 🎲 DICEE GAME 🎲 </footer>
+    <script src="./dice.js"></script>
+  </body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="dice.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dice Game 🎲</h1>
+        
+         <div class="sround">
+        <label for="rounds">Select Rounds:</label>
+        <select id="rounds">
+            <option value="2">2</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+        </select>
+        </div>
+
+        <div class="dice">
+            <p>Player 1</p>
+            <img class="img1" src="./images/dice1.png" />
+            <div>
+                <button id="Player1" onclick="play1()">Play</button>
+            </div>
+        </div>
+
+        <div class="dice">
+            <p>Player 2</p>
+            <img class="img2" src="./images/dice2.png" />
+            <div>
+                <button id="Player2" onclick="play2()">Play</button>
+            </div>
+        </div>
+
+        <div class="results">
+            <h2>Round Results:</h2>
+            <ul id="roundResults"></ul>
+        </div>
+
+        <div class="btn">
+            <button onclick="refresh()">Refresh</button>
+        </div>
+    </div>
+
+    <footer> 🎲 DICEE GAME 🎲 </footer>
+    <script src="./dice.js"></script>
+</body>
+</html>
+
