@@ -8,7 +8,7 @@ This project is built using core web technologies and is designed to be responsi
 
 ## 🔗 Live Demo
 
-👉 https://your-username.github.io/play-zone/
+👉 https://playzoneee.onrender.com/
 
 ---
 
